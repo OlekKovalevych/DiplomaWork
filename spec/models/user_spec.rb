@@ -9,6 +9,10 @@ RSpec.describe User, type: :model do
     it { expect(described_class::NAME_REGEX).to eq(regex) }
   end
 
+  describe 'relation' do
+    it { expect(subject).to have_many(:comments).dependent(:destroy) }
+  end
+
   describe 'validation' do
     context 'when params valid' do
       let(:first_name) { Faker::Name.first_name }

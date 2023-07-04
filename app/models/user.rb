@@ -8,6 +8,8 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, invite_for: 30.days
 
+  has_many :comments, class_name: Comment.name, foreign_key: :author_id, dependent: :destroy
+
   validates :first_name, presence: true, format: { with: NAME_REGEX }
   validates :last_name, presence: true, format: { with: NAME_REGEX }
   validates :email, presence: true
