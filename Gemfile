@@ -49,6 +49,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 gem 'pundit', '~> 2.3'
 gem 'devise_token_auth', '~> 1.2'
+gem 'devise', '~> 4.9.2'
 gem 'devise_invitable', '~> 2.0'
 
 group :development, :test do
