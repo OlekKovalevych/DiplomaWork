@@ -6,6 +6,7 @@ require:
 AllCops:
   TargetRubyVersion: 2.7.2
   Exclude:
+    - vendor/**/*.rb
     - db/schema.rb
     - db/migrate/**
 
@@ -42,3 +43,4 @@ Style/HashTransformValues:
 
 Style/FrozenStringLiteralComment:
   Enabled: true
+
