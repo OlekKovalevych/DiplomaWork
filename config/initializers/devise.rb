@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 Devise.setup do |config|
   config.mailer_sender = 'testrails363@gmail.com'
 
